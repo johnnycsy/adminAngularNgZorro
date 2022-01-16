@@ -1,0 +1,20 @@
+.login {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #7a88ff, #7affaf);
+
+  .login_body {
+    width: 90%;
+    max-width: 30rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.35rem;;
+  }
+
+  button {
+    width: 100%;
+  }
+}

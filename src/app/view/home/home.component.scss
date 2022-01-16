@@ -1,0 +1,34 @@
+.home_body {
+  height: 100vh;
+
+  .home_header{
+    color: white;
+
+    .home_user{
+      display: flex;
+      justify-content: flex-end;
+      justify-items: center;
+      align-items: center;
+    }
+  }
+}
+
+.logo {
+  width: 8.715rem;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  float: left;
+}
+
+.home_sider {
+  height: 100%;
+  border-right: 0;
+  overflow-y: auto;
+}
+
+.inner-layout {
+  .home_content {
+    overflow-y: auto;
+    background-color: white;
+  }
+}

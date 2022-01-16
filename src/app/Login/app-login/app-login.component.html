@@ -1,0 +1,39 @@
+<div class="login">
+  <!-- login from start -->
+  <div class="login_body">
+    <div class="align-center">
+      <h1>ADMIN TITLE</h1>
+    </div>
+
+    <form nz-form class="login_form padding">
+      <nz-form-item>
+        <nz-form-control>
+          <nz-input-group nzPrefixIcon="user">
+            <input type="text" nz-input placeholder="Username" name="username" [(ngModel)]="login.username" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control>
+          <nz-input-group nzPrefixIcon="lock">
+            <input type="password" nz-input placeholder="Password" name="password" [(ngModel)]="login.password" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+
+    <div class="padding margin-bottom align-center">
+      <button nz-button nzType="primary" [nzSize]="size" nzShape="round" (click)="tapLogin()">登录</button>
+    </div>
+
+    <div nz-row class="margin-top padding-top">
+      <div nz-col [nzSpan]="12">
+        <a class="login-form-forgot">找回密码</a>
+      </div>
+      <div nz-col [nzSpan]="12" class="align-right">
+        <a class="login-form-forgot">激活工号</a>
+      </div>
+    </div>
+    <!-- login form end -->
+  </div>
+</div>

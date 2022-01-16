@@ -1,0 +1,71 @@
+<nz-layout class="home_body">
+  <nz-header>
+    <div nz-row class="home_header">
+      <div nz-col [nzSpan]="16">
+        <!-- logo -->
+        <div class="logo margin-right-sm"></div>
+        <!-- menu list -->
+        <ul nz-menu nzTheme="dark" nzMode="horizontal" class="header-menu">
+          <li nz-menu-item nzSelected>nav 1</li>
+          <li nz-menu-item>nav 2</li>
+          <li nz-menu-item>nav 3</li>
+        </ul>
+      </div>
+      <div nz-col [nzSpan]="8">
+        <div class="home_user">
+          <!-- user info operation -->
+          <div>
+            <a nz-dropdown [nzDropdownMenu]="menu">
+              <nz-avatar nzIcon="user" class="margin-right-sm"></nz-avatar>
+              UserName
+            </a>
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+              <ul nz-menu nzSelectable>
+                <li nz-menu-item>个人设置</li>
+                <li nz-menu-item nzDanger (click)="tapCancellation()">注销帐号</li>
+              </ul>
+            </nz-dropdown-menu>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nz-header>
+  <nz-layout>
+    <nz-sider nzTheme="light" class="home_sider">
+      <!-- sider start -->
+      <ul nz-menu nzMode="inline">
+        <li nz-submenu nzTitle="系统统计" nzIcon="pie-chart" nzOpen>
+          <ul>
+            <li nz-menu-item nzSelected="" (click)="tapNavgiationLeft('11')">基础统计</li>
+            <li nz-menu-item>第三方统计</li>
+          </ul>
+        </li>
+        <li nz-submenu nzTitle="用户管理" nzIcon="user">
+          <ul>
+            <li nz-menu-item>用户列表</li>
+            <li nz-menu-item>权限设置</li>
+          </ul>
+        </li>
+        <li nz-submenu nzTitle="报表中心" nzIcon="file-done">
+          <ul>
+            <li nz-menu-item>报表清单</li>
+            <li nz-menu-item>报表记录</li>
+          </ul>
+        </li>
+      </ul>
+      <!-- sider end -->
+    </nz-sider>
+    <nz-layout class="inner-layout padding-sm">
+      <!-- navigation list start -->
+      <nz-breadcrumb class="home_breadcrumb margin-lr-sm margin-bottom-sm">
+        <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+        <nz-breadcrumb-item>List</nz-breadcrumb-item>
+        <nz-breadcrumb-item>App</nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <!-- navigation list end -->
+      <nz-content class="home_content padding-sm">
+        <router-outlet></router-outlet>
+      </nz-content>
+    </nz-layout>
+  </nz-layout>
+</nz-layout>
